@@ -219,6 +219,7 @@
   .photo-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+    grid-auto-flow:dense;
     gap:18px;
   }
   .photo-card{
@@ -398,53 +399,6 @@
     .location{grid-template-columns:1fr;}
   }
 
-  /* ---------- CTA ---------- */
-  .cta{
-    background:var(--slate);
-    border-radius:24px;
-    padding:64px clamp(24px,6vw,72px);
-    text-align:center;
-    color:var(--cloud);
-    position:relative;
-    overflow:hidden;
-  }
-  .cta::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(circle at 20% 120%, rgba(217,166,89,0.25), transparent 60%),
-      radial-gradient(circle at 90% -10%, rgba(91,141,190,0.3), transparent 55%);
-  }
-  .cta-inner{position:relative;z-index:1;}
-  .cta h2{
-    color:var(--cloud);
-    font-size:clamp(1.6rem,4vw,2.2rem);
-    margin-bottom:12px;
-  }
-  .cta p{
-    color:rgba(247,249,247,0.75);
-    max-width:480px;
-    margin:0 auto 30px;
-  }
-  .cta-button{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--gold);
-    color:var(--slate);
-    font-weight:600;
-    padding:15px 30px;
-    border-radius:999px;
-    font-size:0.98rem;
-    transition:transform .2s, box-shadow .2s;
-    box-shadow:0 8px 24px rgba(217,166,89,0.25);
-  }
-  .cta-button:hover{
-    transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(217,166,89,0.35);
-  }
-
   /* ---------- contact ---------- */
   .contact{
     display:grid;
@@ -530,8 +484,8 @@
       <span data-en>Radio Club <span>OK1KPA</span></span>
     </h1>
     <p class="tagline">
-      <span data-cz>Závodíme na VKV z kopce Spálava v Železných Horách — s výhledem, který dělá anténu spokojenou.</span>
-      <span data-en>We compete in VHF contests from Spálava hill in the Železné Hory mountains — a view that keeps every antenna happy.</span>
+      <span data-cz>Závodíme na VKV z kopce Spálava v Železných Horách — s nádherným výhledem.</span>
+      <span data-en>We compete in VHF contests from Spálava hill in the Železné Hory mountains — with a breathtaking view.</span>
     </p>
     <div class="locator-badges">
       <span class="badge">QTH: Spálava</span>
@@ -620,20 +574,6 @@
       <line x1="150" y1="48" x2="165" y2="48" stroke="#5B8DBE" stroke-width="2"/>
       <line x1="150" y1="55" x2="162" y2="55" stroke="#5B8DBE" stroke-width="2"/>
     </svg>
-  </div>
-</section>
-
-<section>
-  <div class="cta">
-    <div class="cta-inner">
-      <div class="eyebrow mono" style="color:rgba(247,249,247,0.6);"><span data-cz>VÝSLEDKY</span><span data-en>RESULTS</span></div>
-      <h2><span data-cz>Vyhodnocení provozního aktivu VKV</span><span data-en>VHF activity contest results</span></h2>
-      <p><span data-cz>Aktuální pořadí, body a odkryté logy najdeš na stránkách VKV PA.</span><span data-en>Current standings, points and revealed logs are on the VKV PA website.</span></p>
-      <a class="cta-button" href="https://vkvpa.hamradio.cz/" target="_blank" rel="noopener">
-        <span data-cz>Otevřít vkvpa.hamradio.cz</span><span data-en>Open vkvpa.hamradio.cz</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </a>
-    </div>
   </div>
 </section>
 
